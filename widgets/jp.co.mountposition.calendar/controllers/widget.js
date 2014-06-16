@@ -210,6 +210,7 @@ exports.select = function(day) {
   }
   touchEvent = OS_ANDROID ? 'singletap' : 'click';
   tile = (_ref3 = $.calendar) != null ? _ref3["" + day] : void 0;
+  $.selected = tile;
   return tile != null ? tile.fireEvent(touchEvent, {
     source: tile
   }) : void 0;
